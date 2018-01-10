@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kevinwinkelman.tipcalculator.MainActivity">
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="Bill"
+        android:id = "@+id/label_amount"
+       />
+
+    <EditText
+        android:id="@+id/bill_amount"
+        style="@style/editTextStyle"
+        android:hint="Enter bill amount"
+        android:layout_alignBottom="@id/label_amount"
+        android:layout_alignLeft="@id/tip_percent_amount"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:text="Tip(%)"
+        android:id = "@+id/label_tip_percent"
+        android:layout_below="@id/label_amount"
+        android:layout_marginTop= "20dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/tip_percent_amount"
+        style="@style/editTextStyle"
+        android:hint="Enter tip percent"
+        android:layout_below="@id/bill_amount"
+        android:layout_alignBaseline="@id/label_tip_percent"
+        android:inputType="number"
+        />
+
+    <View
+        android:id="@+id/line"
+        style="@style/LineStyle"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tip_percent_amount"
+        />
+
+</RelativeLayout>
